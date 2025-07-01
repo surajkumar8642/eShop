@@ -30,5 +30,8 @@
     <ProjectReference Include="..\WebApp\WebApp.csproj" />
     <ProjectReference Include="..\WebhookClient\WebhookClient.csproj" />
   </ItemGroup>
+<ItemGroup>
+  <PackageReference Include="Aspire.Hosting.ApplicationModel" Version="8.0.0" />
+</ItemGroup>
 
 </Project>
