@@ -21,13 +21,13 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore ./src/WebApp/WebApp.csproj
+        run: dotnet restore ./src/eShop.AppHost/eShop.AppHost.csproj
 
-      - name: Build project
-        run: dotnet build ./src/WebApp/WebApp.csproj --configuration Release --no-restore
+      - name: Build AppHost
+        run: dotnet build ./src/eShop.AppHost/eShop.AppHost.csproj --configuration Release --no-restore
 
-      - name: Publish project
-        run: dotnet publish ./src/WebApp/WebApp.csproj -c Release -o publish_output
+      - name: Publish AppHost
+        run: dotnet publish ./src/eShop.AppHost/eShop.AppHost.csproj -c Release -o publish_output
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
